@@ -1,0 +1,83 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Challenge Diskon</title>
+
+ <script>
+    const totalBelanja = prompt("Input total belanja");
+    alert("Hore, Anda mendapatkan diskon 25% 😍");
+
+    // Challenge!
+    // Persentase diskon
+    const discountPercentage = 25;
+
+    // Total diskon yang didapatkan
+    const discountAmount = totalBelanja * (discountPercentage / 100);
+
+    // Total yang harus dibayar setelah diskon
+    const totalBayar = totalBelanja - discountAmount;
+
+    const outputTemplate = `
+            <h1>Ringkasan Transaksi Belanja anda</h1>
+            <p>Total Belanja: ${totalBelanja}</p>
+            <p>Diskon: <span style="color:green">-${discountAmount.toFixed(2)} (${discountPercentage}%)</span></p>
+            <p>Total bayar: <b>${totalBayar.toFixed(2)}</b></p>
+        `;
+
+    document.write(outputTemplate);
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Challenge Diskon</title>
+
+ <script>
+    const totalBelanja = prompt("Input total belanja");
+    let discountPercentage;
+    let discountAmount;
+    let totalBayar;
+
+    // Determine the discount percentage based on the total shopping amount
+    if (totalBelanja > 1000000) {
+      discountPercentage = 50;
+    } else {
+      discountPercentage = 25;
+    }
+
+    // Calculate the discount amount
+    discountAmount = (totalBelanja * discountPercentage) / 100;
+
+    // Calculate the total amount to be paid after the discount
+    totalBayar = totalBelanja - discountAmount;
+
+    const outputTemplate = `
+            <h1>Ringkasan Transaksi Belanja anda</h1>
+            <p>Total Belanja: ${totalBelanja}</p>
+            <p>Diskon: <span style="color:green">-${discountAmount.toFixed(2)} (${discountPercentage}%)</span></p>
+            <p>Total bayar: <b>${totalBayar.toFixed(2)}</b></p>
+        `;
+
+    document.write(outputTemplate);
+ </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

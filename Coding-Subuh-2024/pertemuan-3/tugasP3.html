@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hitung Jumlah Buah</title>
+<script>
+    function hitungJumlahBuah() {
+        // Mengambil nilai input dari pengguna
+        var jumlahApel = parseInt(document.getElementById("apel").value);
+        var jumlahJeruk = parseInt(document.getElementById("jeruk").value);
+        
+        // Menghitung jumlah total buah
+        var totalBuah = jumlahApel + jumlahJeruk;
+        
+        // Menampilkan hasil perhitungan
+        document.getElementById("hasil").innerHTML = "Total buah: " + totalBuah;
+    }
+</script>
+</head>
+<body>
+    <h2>Masukkan Jumlah Buah</h2>
+    <label for="apel">Jumlah Apel:</label>
+    <input type="number" id="apel" name="apel" value="0"><br><br>
+    
+    <label for="jeruk">Jumlah Jeruk:</label>
+    <input type="number" id="jeruk" name="jeruk" value="0"><br><br>
+    
+    <button onclick="hitungJumlahBuah()">Hitung</button>
+    
+    <div id="hasil"></div>
+</body>
+</html>
